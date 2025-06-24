@@ -28,7 +28,7 @@ export interface Bot {
 }
 
 // --- In-Memory State ---
-let orders: Order[] = [];
+const orders: Order[] = [];
 let bots: Bot[] = [{ id: 1, status: 'IDLE', orderId: null }];
 let nextOrderId = 1;
 const PROCESSING_TIME_MS = 10000; // 10 seconds

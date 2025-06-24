@@ -10,6 +10,6 @@ export async function POST(request: Request) {
     const newOrder = addOrder(type);
     return NextResponse.json(newOrder, { status: 201 });
   } catch (error) {
-    return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
+    return NextResponse.json({ error: `Invalid request body: ${error}` }, { status: 400 });
   }
 } 
